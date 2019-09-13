@@ -1,0 +1,85 @@
+* {
+	margin: 0px;
+}
+
+body {
+	padding: 5px;
+	font-family: Calibri, Arial, sans-serif;
+}
+
+
+/* ---------- Nav Section ---------- */
+nav { /* there is only one nav bar, so targeting it and its children by tag name should be ok in this case? */
+	background: #653d3d; /* taken with colorpicker */
+	display: inline-block; /* needed to be able to set a width to the nav bar beyond its content */
+	width: 100%;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav li {
+	padding: 1em;
+	float: left;
+}
+
+nav a {
+	color: #ccc;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+nav li:hover, nav a:hover {
+	background: #875f5f;
+	color: #fff;
+}
+
+/* .you_are_here {
+	color: #fff; indicates where you are on the website by making the nav item a lighter color
+} */
+
+/* ---------- Header Section ---------- */
+.header1 {
+	padding: 20px 0px;
+}
+
+.header1 .logo {
+	float: left;
+	position: relative;
+	left: -40px; /* move the picture to the left to make its pos resemble the preview (without having to edit the image itself) */
+}
+
+.header1 .headertext {
+ font-size: 1.5em;
+ display: table-cell; /* allows us to set a height and thus vertical-align the text */
+ height: 150px; /* same height as logo image */
+ vertical-align: middle;
+ position: relative;
+ left: -80px;
+}
+
+.header2 { /* "this is my first website :)" */
+	font-size: 2em;
+	text-align: center;
+	padding: 50px 0px;
+}
+
+/* ---------- HR & Footer Section ---------- */
+.divider {
+	border: none;
+	height: 5px;
+	background-image: linear-gradient(to right, rgba(0,0,0,0), #666, rgba(0,0,0,0)); /* adds nice gradient effect to the hr */
+	margin: 100px 0px 20px;
+}
+
+footer {
+	text-align: center;
+}
+
+footer #logobottom {
+	height: 75px; /* make image smaller */
+	width: auto; /* ...and keep correct ratio (actually redundant) */
+}
+
