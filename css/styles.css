@@ -122,7 +122,6 @@ Appearently it is recommended to use the same .css file for different pages anyw
 }
 
 .wrapper>div {
-	align-self: right;
 	display: flex;
 	flex-flow: column;
 }
