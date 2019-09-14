@@ -169,7 +169,7 @@ Appearently it is recommended to use the same .css file for different pages anyw
 }
 
 .about h1 {
-	margin: 0 auto; /* h1 is a block-level element so it can be centered like this. <center> is obsolete*/
+	text-align: center;
 }
 
 .about p:nth-child(even) {
