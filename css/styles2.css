@@ -1,0 +1,141 @@
+* {
+	margin: 0px; /* set margin to 0 for everything, so I don't have to deal with default margins */
+}
+
+body {
+	padding: 0px 120px;
+	font-family: Calibri, sans-serif;
+}
+
+
+
+/* ---------- Nav Section ---------- */
+nav { /* there is only one nav bar, so targeting it and its children by tag name should be ok in this case (same for footer) */
+	background: #653d3d; /* all colors taken with colorpicker */
+	display: inline-block; /* needed to be able to set a width to the nav bar beyond its content */
+	width: 100%;
+}
+
+nav ul {
+	list-style-type: none; /* gets rid of the default circles for list items */
+}
+
+nav li {
+	padding: 1em;
+	float: left;
+}
+
+nav a {
+	color: #ccc;
+	text-decoration: none; /* gets rid of the default underline for links */
+	font-weight: bold;
+	font-size: 2em;
+}
+
+nav li:hover, nav a:hover {
+	background: #875f5f;
+	color: #fff;
+}
+
+.you_are_here {
+	color: #fff; /* indicates where you are on the website by making the nav item a lighter color */
+}
+
+
+
+/* ---------- Header Section ---------- */
+.header1 {
+	background: #ededed;
+	padding: 20px 0px;
+}
+
+.header1 .logo {
+	float: left;
+	position: relative;
+	left: -40px; /* move the picture to the left to make its pos resemble the preview (without having to edit the image itself) */
+}
+
+.header1 .headertext {
+ font-size: 1.3em;
+ display: table-cell; /* allows us to set a height and thus vertical-align the text */
+ height: 150px; /* same height as logo image */
+ vertical-align: middle;
+ position: relative;
+ left: -80px;
+}
+
+.header2 { /* "this is my first website :)" */
+	font-size: 1.8em;
+	text-align: center;
+	padding: 50px 0px;
+}
+
+
+
+/* ---------- HR & Footer Section ---------- */
+.divider {
+	border: none;
+	height: 5px;
+	background-image: linear-gradient(to right, rgba(0,0,0,0), #666, rgba(0,0,0,0)); /* adds nice gradient effect to the hr */
+	margin: 100px 0px 20px; /* top, left+right, bottom */
+}
+
+footer {
+	text-align: center; /* will also align the image */
+}
+
+footer #logobottom {
+	height: 75px; /* make image smaller */
+	width: auto; /* ...and keep correct ratio (actually redundant) */
+}
+
+
+
+/* ---------- PAGE SPECIFIC ---------- */
+
+/* ---------- INDEX2.HTML (ALTERNATE SOLUTION) ---------- */
+
+.titlebar {
+	font-size: 2em;
+	color: #fff;
+	background: #978484;
+	height: 40px;
+	padding: 10px 20px;
+}
+
+.wrapper {
+	text-align: center;
+	padding-top: 30px
+}
+
+.wrapper img {
+	width: 540px;
+	height: 360px;
+	padding-bottom: 5px;
+}
+
+.rowwrapper {
+	/* display: block; */
+	/* vertical-align: top; */
+}
+
+.item {
+	vertical-align: top;
+	display: inline-block;
+	width: 540px;
+	padding: 0px 15px 50px;
+}
+
+.wrapper a {
+	text-decoration: none;
+ 	color: #000;
+}
+
+.wrapper a:hover {
+	text-decoration: underline;
+}
+
+.imageText {
+	font-size: 1.8em;
+	font-weight: bold;
+}
