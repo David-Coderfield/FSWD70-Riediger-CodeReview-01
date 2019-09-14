@@ -127,8 +127,12 @@ Appearently it is recommended to use the same .css file for different pages anyw
 }
 
 .wrapper a {
-	text-decoration: none !important;
+	text-decoration: none;
  	color: #000;
+}
+
+.wrapper a:hover {
+	text-decoration: underline;
 }
 
 .imageText {
