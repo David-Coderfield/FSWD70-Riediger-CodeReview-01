@@ -8,12 +8,12 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header1">
 		<div class="logo">
 			<img src="img/codefactory-vienna-logo.png" alt="CodeFactory logo">
 		</div>
 		<div class="headertext">
-			<h2>David Riediger - I am a future Full Stack Developer</h2>
+			<h2>David Riediger - I am a future Full Stack Web Developer</h2>
 		</div>
 	</header>
 
@@ -27,44 +27,48 @@
 	</nav>
 
 	<!-- START OF PAGE SPECIFIC CONTENT -->
-	<form class="contact">
-		<table>
-			<tr>
-				<td>First Name (*)</td>
-				<td><input type="text" name="firstname" id="firstname"></td>
-			</tr>
-			<tr>
-				<td>Surname (*)</td>
-				<td><input type="text" name="surname" id="surname"></td>
-			</tr>
-			<tr>
-				<td>E-Mail (*)</td>
-				<td><input type="email" name="email" id="email"></td>
-			</tr>
-			<tr>
-				<td>Phone</td>
-				<td><input type="number" name="phone" id="phone"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="checkbox" name="call" id="call">	Contact me by phone</td>
-			</tr>
-			<tr>
-				<td colspan="2"><textarea name="msg" id="msg" cols="30" rows="10"></textarea> </td>
-			</tr>
-			<tr>
-				<td>(*) Required</td>
-				<td><input type="submit" value="Submit"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</form>
+	<main class="contact">
+		<form id="msgform">
+			<table>
+				<tr>
+					<td>Topic</td>
+					<td>
+						<select id="topic">
+							<option value="general">General</option>
+							<option value="joke">I'm so funny</option>
+							<option value="love">I love U</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>First Name (*)</td>
+					<td><input type="text" name="firstname" id="firstname" required></td> <!--required attribute makes sure it's filled in-->
+				</tr>
+				<tr>
+					<td>Surname (*)</td>
+					<td><input type="text" name="surname" id="surname" required></td>
+				</tr>
+				<tr>
+					<td>E-Mail (*)</td>
+					<td><input type="email" name="email" id="email" placeholder="you@mail.com" required></td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td><input type="number" name="phone" id="phone"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="checkbox" name="call" id="call">	Contact me by phone</td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your message to us..." required></textarea></td>
+				</tr>
+				<tr>
+					<td>(*) Required</td>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</form>
+	</main>
 	<!-- END OF PAGE SPECIFIC CONTENT -->
 
 	<hr class="divider">

@@ -10,14 +10,14 @@ body {
 
 
 /* ---------- Nav Section ---------- */
-nav { /* there is only one nav bar, so targeting it and its children by tag name should be ok in this case */
-	background: #653d3d; /* taken with colorpicker */
+nav { /* there is only one nav bar, so targeting it and its children by tag name should be ok in this case (same for footer) */
+	background: #653d3d; /* all colors taken with colorpicker */
 	display: inline-block; /* needed to be able to set a width to the nav bar beyond its content */
 	width: 100%;
 }
 
 nav ul {
-	list-style-type: none;
+	list-style-type: none; /* gets rid of the default circles for list items */
 }
 
 nav li {
@@ -27,7 +27,7 @@ nav li {
 
 nav a {
 	color: #ccc;
-	text-decoration: none;
+	text-decoration: none; /* gets rid of the default underline for links */
 	font-weight: bold;
 	font-size: 2em;
 }
@@ -38,13 +38,14 @@ nav li:hover, nav a:hover {
 }
 
 .you_are_here {
-	color: #fff; indicates where you are on the website by making the nav item a lighter color
+	color: #fff; /* indicates where you are on the website by making the nav item a lighter color */
 }
 
 
 
 /* ---------- Header Section ---------- */
 .header1 {
+	background: #ededed;
 	padding: 20px 0px;
 }
 
@@ -55,7 +56,7 @@ nav li:hover, nav a:hover {
 }
 
 .header1 .headertext {
- font-size: 1.5em;
+ font-size: 1.3em;
  display: table-cell; /* allows us to set a height and thus vertical-align the text */
  height: 150px; /* same height as logo image */
  vertical-align: middle;
@@ -64,7 +65,7 @@ nav li:hover, nav a:hover {
 }
 
 .header2 { /* "this is my first website :)" */
-	font-size: 2em;
+	font-size: 1.8em;
 	text-align: center;
 	padding: 50px 0px;
 }
@@ -76,11 +77,11 @@ nav li:hover, nav a:hover {
 	border: none;
 	height: 5px;
 	background-image: linear-gradient(to right, rgba(0,0,0,0), #666, rgba(0,0,0,0)); /* adds nice gradient effect to the hr */
-	margin: 100px 0px 20px;
+	margin: 100px 0px 20px; /* top, left+right, bottom */
 }
 
 footer {
-	text-align: center;
+	text-align: center; /* will also align the image */
 }
 
 footer #logobottom {
@@ -106,8 +107,8 @@ Appearently it is recommended to use the same .css file for different pages anyw
 
 .wrapper {
 	width: 90vw; /* making it viewport dependant makes it responsive to changes */
-	display: grid; /* One of many solutions */
-	grid-template-columns: repeat(auto-fit, 540px); /*if screen goes too small, it will switch to only 1 column*/
+	display: grid; /* One of many solutions to make multiple columns*/
+	grid-template-columns: repeat(auto-fit, 540px); /*if screen goes too small, or you zoom, it will switch to only 1 column*/
 	grid-row-gap: 50px;
 	grid-column-gap: 200px;
 	margin: 0 auto;
@@ -115,8 +116,8 @@ Appearently it is recommended to use the same .css file for different pages anyw
 }
 
 .wrapper img {
-	max-width: 540px;
-	height: 360px;
+	width: 540px;
+	height: 360px; /* resize them all to the same size, while keeping around the same aspect ratio */
 	padding-bottom: 10px;
 }
 
@@ -124,6 +125,11 @@ Appearently it is recommended to use the same .css file for different pages anyw
 	align-self: right;
 	display: flex;
 	flex-flow: column;
+}
+
+.wrapper a {
+	text-decoration: none !important;
+ 	color: #000;
 }
 
 .imageText {
@@ -134,7 +140,52 @@ Appearently it is recommended to use the same .css file for different pages anyw
 
 
 /* ---------- CONTACT ---------- */
-main.contact {
-	font-size: 1.5em
-	/* padding: 20px; */
+.contact table {
+	margin: 40px auto;
+	background: #eee;
+}
+
+.contact td {
+	padding: 4px;
+}
+
+.contact td:nth-child(even) {
+	text-align: right; /* make all of right column align right */
+}
+
+.contact table * {
+	font-size: 22px; /* interesting how text in inputfields is bigger, despite them being defined the same size in px */
+}
+
+#firstname, #surname, #email, #phone {
+	width: 270px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about * { /* instead of targeting all the h1, h3 and p tags seperately */
+	padding: 1em;
+}
+
+.about h1 {
+	margin: 0 auto; /* h1 is a block-level element so it can be centered like this. <center> is obsolete*/
+}
+
+.about p:nth-child(even) {
+	background: #efe;
+	font-size: 1.2em;
+}
+
+.about p:nth-child(odd) {
+	background: #fdd;
+	font-size: 1.2em;
+}
+
+
+/* ---------- BLOG ---------- */
+
+.blog * {
+	padding: 10px 0px;
+	text-align: center;
 }
